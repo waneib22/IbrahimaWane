@@ -1,0 +1,24 @@
+<!-- app.component.html -->
+<mat-toolbar>
+  <div class="toolbar-left">
+    <span>BMCI Intranet</span>
+  </div>
+  <div class="toolbar-right">
+    <span class="username" *ngIf="isAuthenticated">{{ username }}!</span>
+    <button mat-button *ngIf="isAuthenticated" (click)="handleLogout()">Se déconnecter</button>
+  </div>
+</mat-toolbar>
+<div class="subheader-separator"></div>
+<mat-sidenav-container *ngIf="isAuthenticated">
+  <mat-sidenav mode="side" opened class="mat-elevation-z8">
+    <app-module-list></app-module-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<router-outlet *ngIf="!isAuthenticated"></router-outlet>
+
+<footer class="footer">
+
+</footer>

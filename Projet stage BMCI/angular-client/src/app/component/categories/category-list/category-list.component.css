@@ -1,0 +1,15 @@
+.sidebar-category-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-category-link:hover {
+    background-color: #555;
+}
+
+.sidebar-category-link + .sidebar-category-link {
+    margin-top: 0.5rem;
+}

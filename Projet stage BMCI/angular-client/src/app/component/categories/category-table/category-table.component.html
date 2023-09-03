@@ -1,0 +1,32 @@
+<!-- category-table.component.html -->
+
+<div class="category-table">
+  <h2>Categories du module</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{ category.name }}</td>
+        <td>{{ category.description }}</td>
+        <td>
+          <button mat-icon-button (click)="viewDocuments(category.id)">
+            <mat-icon>description</mat-icon>
+          </button>
+          <button mat-icon-button (click)="openUpdateDialog(category)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteCategory(category)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button mat-raised-button class="new-category" (click)="openCreateDialog()">Nouvelle catégorie</button>

@@ -1,0 +1,27 @@
+<div class="document-table">
+    <h2>Documents for Category {{ categoryId }}</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let document of documents">
+          <td>{{ document.documentName }}</td>
+          <td>
+            <button (click)="downloadDocument(document.documentCode)">
+              <mat-icon>download</mat-icon>
+            </button>
+            <button mat-icon-button (click)="openEditDialog(document)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button class="mat-icon-button delete-button" (click)="deleteDocument(document)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

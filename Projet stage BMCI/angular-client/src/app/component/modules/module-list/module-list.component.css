@@ -1,0 +1,44 @@
+.module-list-container {
+  margin-top: 16px;
+}
+
+.mat-expansion-panel-header {
+  background-color: #21B6A8;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.mat-expansion-panel-header:hover {
+  background-color: #16442E;
+  justify-content: flex-start; 
+  padding-left: 16px;
+}
+
+.mat-expansion-panel-content {
+  background-color: #3F574F;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.mat-expansion-panel-content.mat-expanded {
+  background-color: #3F574F;
+}
+
+.category-list {
+  list-style-type: none;
+  padding-left: 16px;
+}
+
+.category-list li {
+  margin: 8px 0;
+}
+
+.module-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.module-item a:hover {
+  text-decoration: none;
+  color: #428bca;
+}

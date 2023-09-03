@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Update Category</h2>
+<mat-dialog-content>
+  <form (submit)="updateCategory()" #updateForm="ngForm">
+    <mat-form-field>
+      <input matInput type="text" name="name" [(ngModel)]="updatedCategory.name" placeholder="Category Name" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput name="description" [(ngModel)]="updatedCategory.description" placeholder="Description"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" [disabled]="updateForm.invalid" (click)="updateCategory()">Update</button>
+</mat-dialog-actions>

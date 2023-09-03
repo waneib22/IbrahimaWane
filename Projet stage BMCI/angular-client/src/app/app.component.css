@@ -1,0 +1,63 @@
+/* app.component.css */
+
+body, html {
+  background-color: #ECF87F;
+  margin: 0;
+  padding: 0;
+}
+
+mat-toolbar {
+  height: 32px;
+  padding: 0 16px;
+  background-color: forestgreen;
+  color: white;
+}
+
+.username {
+  font-size: small;
+}
+
+.toolbar-left {
+  flex: 1;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subheader-separator {
+  height: 10px;
+  background-color: goldenrod;
+}
+
+mat-sidenav {
+  margin-right: 16px;
+  width: 200px;
+  border-right: none;
+  background: #ECF87F;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+mat-sidenav-content {
+  background-color: #ECF87F;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: goldenrod;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

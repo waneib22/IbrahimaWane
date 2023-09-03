@@ -1,0 +1,11 @@
+/* login.component.css */
+
+.form-element {
+  display: block;
+  margin-bottom: 1rem; /* Adjust as needed */
+}
+
+.custom-button {
+  background-color: forestgreen !important;
+  color: white !important;
+}
